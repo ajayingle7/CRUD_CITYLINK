@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">City ID</th>
+      <th scope="col">Area</th>
+      <th scope="col">Zip Code</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <td>{{i.id}}</td>
+      <td>{{i.area}}</td>
+      <td>{{i.zip}}</td>
+            <th><button class="btn btn-white btn-lg"><a href="{% url 'updateview' i.area  %}">Update</a></button></th>
+                    <th><button class="btn btn-danger btn-lg"><a href="{% url 'deleteview' i.area  %}">Delete</a></button></th>
+
+
+
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}

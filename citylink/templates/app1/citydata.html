@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <table class="table table-info">
+  <thead>
+    <tr>
+      <th scope="col">City ID</th>
+      <th scope="col">City name</th>
+      <th scope="col">Dist</th>
+      <th scope="col">State</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <td>{{i.cid}}</td>
+      <td>{{i.cname}}</td>
+      <td>{{i.dist}}</td>
+        <td>{{i.state}}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}
